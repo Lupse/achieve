@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import {PrimaryButton,SecondaryButton} from "../../components/CustomButton";
 import CustomInput from "../../components/CustomInput";
 
@@ -38,7 +39,7 @@ export default function AuthPage() {
                 </div>
             </center>
             <div className="flex justify-end mt-5">
-                <a href="#" className="hover:text-[#091743] text-[#1A43C0] ">Lupa Kata Sandi?</a>
+                <Link href="#" className="hover:text-[#091743] text-[#1A43C0] ">Lupa Kata Sandi?</Link>
             </div>
             <PrimaryButton  onClick={() => alert("Ditekan!")}> Masuk </PrimaryButton>
             <center>
@@ -49,7 +50,7 @@ export default function AuthPage() {
                 Daftar Dengan Linkedin
             </SecondaryButton>
             <center>
-                <p className="  text-[18px] mt-10">Belum punya akun? <a href="#" className="hover:text-[#091743] text-[#1A43C0] ">Daftar Sekarang</a></p>
+                <p className="  text-[18px] mt-10">Belum punya akun? <Link href="/auth/register" className="hover:text-[#091743] text-[#1A43C0] ">Daftar Sekarang</Link></p>
             </center>
         </div>
     </div>

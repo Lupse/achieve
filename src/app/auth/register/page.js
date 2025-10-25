@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import {PrimaryButton,SecondaryButton} from "../../components/CustomButton";
 import CustomInput from "../../components/CustomInput";
 
@@ -51,7 +52,7 @@ export default function AuthPage() {
                 Daftar dengan akun Linkedin
             </SecondaryButton>
             <center>
-                <p className="  text-[18px] mt-10">Sudah punya akun? <a href="#" className="hover:text-[#091743] text-[#1A43C0] ">Masuk Sekarang</a></p>
+                <p className="  text-[18px] mt-10">Sudah punya akun? <Link href="/auth/login" className="hover:text-[#091743] text-[#1A43C0] ">Masuk Sekarang</Link></p>
             </center>
         </div>
     </div>
