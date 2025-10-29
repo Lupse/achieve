@@ -11,9 +11,12 @@ export default function AuthPage() {
     <div className="w-full overflow-x-hidden">
     {/* Navbar */}
     <div className="h-[60px] md:h-[76px] border-b border-[#595959] flex items-center justify-between px-4 md:px-[3vw]">
-      <img src="../icons/achieve-logo.png" alt="Achieve Logo" className="w-[30px] h-[32px] md:w-[38.47px] md:h-[41.61px]"/>
-      <div className="flex gap-2 md:gap-5">
-        
+      <img src="../icons/achieve-logo.png" alt="Achieve Logo" className="w-[30px] h-[32px] md:w-[38.47px] md:h-[41.61px]"/> 
+      <div className="flex gap-2 items-center md:gap-5">
+        <p>Profil Saya</p>
+        <Link href="#" className="w-10 h-10 bg-[#DDE3F6] rounded-full flex items-center justify-center hover:bg-[#B8C5EB] transition-colors">
+            <img src="../icons/profile.png" alt="Facebook" className="w-5 h-5" />
+        </Link>
       </div>
     </div>
 
@@ -32,7 +35,7 @@ export default function AuthPage() {
         
         <div className="flex flex-col md:flex-row items-center gap-3 md:gap-5 mt-20 md:mt-40 mb-10 px-4">
             <p className="text-[16px] md:text-[21px] text-[#091743] opacity-50 text-center md:text-left">Siap membangun masa depanmu?</p>
-            <Link href="../auth/login" className="bg-linear-to-r from-[#1A43C0] to-[#0C1F5A] text-white text-[14px] md:text-[16px] font-semibold w-full md:w-[365px] h-[42px] rounded-4xl flex justify-center items-center">Masuk</Link>
+            <Link href="../auth/login" className="bg-linear-to-r from-[#1A43C0] to-[#0C1F5A] text-white text-[14px] md:text-[16px] font-semibold w-full md:w-[365px] h-[42px] rounded-4xl flex justify-center items-center">Analisis CV Sekarang</Link>
         </div>
     </div>
 

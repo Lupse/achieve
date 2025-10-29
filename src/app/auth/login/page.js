@@ -40,11 +40,11 @@ export default function AuthPage() {
       localStorage.setItem("token", data.access_token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      alert("Login berhasil 🎉");
       setMessage("Login berhasil!");
 
       // Contoh redirect ke dashboard (nanti bisa ganti path sesuai kebutuhan)
-      window.location.href = "/dashboard";
+      window.location.href = "/landing_page/registered";
+
     } catch (err) {
       setMessage(err.message);
     } finally {

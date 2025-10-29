@@ -7,7 +7,6 @@ import CustomInput from "../../../components/CustomInput";
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://achieve-backend-916874812181.asia-southeast1.run.app";
 
 export default function AuthPage() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
@@ -42,8 +41,8 @@ export default function AuthPage() {
       }
 
       localStorage.setItem("token", data.access_token);
-      alert("Akun berhasil dibuat 🎉");
       setMessage("Pendaftaran berhasil!");
+      window.location.href = "/landing_page/registered";
     } catch (err) {
       setMessage(err.message);
     } finally {
