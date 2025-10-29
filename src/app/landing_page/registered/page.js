@@ -13,8 +13,7 @@ export default function AuthPage() {
     <div className="h-[60px] md:h-[76px] border-b border-[#595959] flex items-center justify-between px-4 md:px-[3vw]">
       <img src="../icons/achieve-logo.png" alt="Achieve Logo" className="w-[30px] h-[32px] md:w-[38.47px] md:h-[41.61px]"/>
       <div className="flex gap-2 md:gap-5">
-        <Link href="../auth/register" className="border border-[#1A43C0] bg-white text-[#1A43C0] text-[#1A73E8] w-[90px] md:w-[126px] h-[28px] md:h-[32px] text-[14px] md:text-[16px] rounded-4xl flex justify-center items-center">Daftar</Link>
-        <Link href="../auth/login" className="bg-[#1A43C0] text-white text-[14px] md:text-[16px] font-semibold w-[90px] md:w-[126px] h-[28px] md:h-8 rounded-4xl flex justify-center items-center">Masuk</Link>
+        
       </div>
     </div>
 
