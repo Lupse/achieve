@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import ClickSpark from '../components/ClickSpark';
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -16,7 +17,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} antialiased`}>
-        {children}
+          <ClickSpark
+          sparkColor='#102873'
+          sparkSize={12}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={500}
+        >
+              {children}
+      </ClickSpark>
       </body>
     </html>
   );
