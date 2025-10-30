@@ -62,11 +62,13 @@ export default function AuthPage() {
     <div className="overflow-x-hidden">
       {/* Navbar */}
       <div className="h-[60px] md:h-[76px] border-b border-[#595959] flex items-center px-4 md:pl-[3vw]">
-        <img
-          src="../icons/achieve-logo.png"
-          alt="Achieve Logo"
-          className="w-[30px] h-[32px] md:w-[38.47px] md:h-[41.61px]"
-        />
+       <Link href="/landing_page/unregistered">
+          <img
+            src="../icons/achieve-logo.png"
+            alt="Achieve Logo"
+            className="w-[30px] h-[32px] md:w-[38.47px] md:h-[41.61px]"
+          />
+        </Link>
       </div>
 
       {/* Content */}
