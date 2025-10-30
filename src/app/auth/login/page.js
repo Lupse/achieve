@@ -33,20 +33,28 @@ export default function AuthPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.message || "Gagal masuk!");
+        // langsung lempar seluruh data biar bisa dibaca di catch
+        throw data;
       }
 
       // Simpan token ke localStorage
       localStorage.setItem("token", data.access_token);
       localStorage.setItem("user", JSON.stringify(data.user));
 
-      setMessage("Login berhasil!");
 
       // Contoh redirect ke dashboard (nanti bisa ganti path sesuai kebutuhan)
       window.location.href = "/landing_page/registered";
 
     } catch (err) {
-      setMessage(err.message);
+      console.log("Error response:", err);
+
+      // ambil pesan dari struktur nested
+      const detailError =
+        err?.errors?.[0]?.errors?.[0] ||
+        err?.message ||
+        "Terjadi kesalahan, coba lagi nanti.";
+
+      setMessage(detailError);
     } finally {
       setLoading(false);
     }

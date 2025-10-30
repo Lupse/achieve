@@ -37,14 +37,22 @@ export default function AuthPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.message || "Gagal mendaftar!");
+        // langsung lempar seluruh data biar bisa dibaca di catch
+        throw data;
       }
 
       localStorage.setItem("token", data.access_token);
-      setMessage("Pendaftaran berhasil!");
       window.location.href = "/landing_page/registered";
     } catch (err) {
-      setMessage(err.message);
+      console.log("Error response:", err);
+
+      // ambil pesan dari struktur nested
+      const detailError =
+        err?.errors?.[0]?.errors?.[0] ||
+        err?.message ||
+        "Terjadi kesalahan, coba lagi nanti.";
+
+      setMessage(detailError);
     } finally {
       setLoading(false);
     }
